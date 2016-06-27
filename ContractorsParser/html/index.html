@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Список контрагентов</title>
+	<link rel="stylesheet" type="text/css" href="static/style.css" />
+</head>
+<body>
+
+	<div class="contractors">
+		<h2>Список контрагентов</h2>
+		<p align="center"><a href="import.html">Импортировать список контрагентов</a></p>
+		<div id="contractors_list"></div>
+	</div>
+
+	<div id="popup_background" style="display: none;"></div>
+	<div id="contragent_popup" style="display: none;">
+		<p class="contragent_card_title">Карта контрагента:</p>
+		<p>
+			<label>Имя:</label>
+			<input type="text" id="contragent_name" readonly>
+		</p>
+		<p>
+			<label>ИНН:</label>
+			<input type="text" id="contragent_inn" readonly>
+		</p>
+		<p>
+			<label>Рассчетный счет:</label>
+			<input type="text" id="contragent_payment_account" readonly>
+		</p>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script src="static/action.js" charset="utf-8"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function(){
+			ContragentsController.loadAll();
+		}, false);
+	</script>
+</body>
+</html>
