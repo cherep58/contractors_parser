@@ -8,7 +8,7 @@ using Dapper;
 
 namespace ContractorsParser.Models
 {
-    // Класс, харнящий краткую информацию о контрагенте
+    // Класс, хранящий краткую информацию о контрагенте
     public class ContractorShortInfo
     {
         public Int32 Id { get; set; }
